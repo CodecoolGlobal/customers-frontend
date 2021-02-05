@@ -14,6 +14,8 @@ export class CustomerService {
   }
 
   public findAll(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(this.customersUrl);
+    return this.http.get<Customer[]>(this.customersUrl, {
+      headers: {'Access-Control-Allow-Origin': 'https://customers-backend-demo.herokuapp.com'}
+    });
   }
 }
