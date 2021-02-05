@@ -10,7 +10,7 @@ export class CustomerService {
 
   customersUrl: string;
   constructor(private http: HttpClient) {
-    this.customersUrl = 'http://localhost:8080/customers';
+    this.customersUrl = 'https://customers-backend-demo.herokuapp.com/customers';
   }
 
   public findAll(): Observable<Customer[]> {
